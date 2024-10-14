@@ -176,7 +176,7 @@ export default function Page() {
                 <input className="input input-bordered w-full" placeholder="Price" type="number" min={0} onChange={(x) => setPrice(parseInt(x.target.value))} value={price} />
                 <div className="modal-action">
                     <label htmlFor="newitem_modal" className="btn">Cancel</label>
-                    <label htmlFor="newitem_modal" className="btn btn-primary" onClick={() => createItem()}>Create item</label>
+                    <label htmlFor="newitem_modal" className="btn glass btn-primary" onClick={() => createItem()}>Create item</label>
                 </div>
             </div>
         </div>
@@ -201,7 +201,7 @@ export default function Page() {
                 <input className="input input-bordered w-full" placeholder="Price" type="number" min={0} onChange={(x) => setPrice(parseInt(x.target.value))} value={price} />
                 <div className="modal-action">
                     <label htmlFor="edititem_modal" className="btn">Cancel</label>
-                    <label htmlFor="edititem_modal" className="btn btn-primary" onClick={() => editItem()}>Save</label>
+                    <label htmlFor="edititem_modal" className="btn glass btn-primary" onClick={() => editItem()}>Save</label>
                 </div>
             </div>
             <label htmlFor="edititem_modal" className="modal-backdrop"></label>

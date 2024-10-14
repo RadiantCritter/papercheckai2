@@ -56,7 +56,7 @@ export default function Home() {
                 <input className="input input-bordered mb-5 max-w-xs" placeholder="Email" type="text" onChange={(x) => setEmail(x.target.value)} value={email} />
                 <p className="text-sm mb-1">Password</p>
                 <input className="input input-bordered mb-5 max-w-xs" placeholder="Password" type="password" onChange={(x) => setPassword(x.target.value)} value={password} />
-                <button className="btn btn-primary glass max-w-xs" onClick={() => login()}>Login</button>
+                <button className="btn glass btn-primary glass max-w-xs" onClick={() => login()}>Login</button>
                 <br/>
                 <p className="mb-5">Don&apos;t have an account? <Link href={'/signup'}><label htmlFor="createchatbot_modal" className="btn glass text-white btn-sm">Sign up</label></Link></p>
             </div>

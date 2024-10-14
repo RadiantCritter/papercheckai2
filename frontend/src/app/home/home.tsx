@@ -95,7 +95,7 @@ export default function Home({
   }, [selectedEvaluator]);
 
   return (
-    <main className="flex bg-base-100 h-screen w-screen p-2 max-sm:p-0" onClick={() => {
+    <main className="flex bg-black h-screen w-screen p-2 max-sm:p-0" onClick={() => {
       if (moreMenuOpen) setMoreMenuOpen(false);
     }}>
       {/* Sidebar */}
@@ -115,7 +115,7 @@ export default function Home({
         <label ref={(x) => {
           newClassModalRef.current = x;
         }} htmlFor="newclass_modal" hidden></label>
-        <label className='btn btn-primary' htmlFor={selectedTab === 0 && limits?.evaluatorLimit === 0 ? "limitexceed_modal" : ["newevaluator_modal", "newclass_modal"][selectedTab]}><FiPlus /> NEW {["EVALUATOR", "CLASS"][selectedTab]}</label>
+        <label className='btn glass btn-primary' htmlFor={selectedTab === 0 && limits?.evaluatorLimit === 0 ? "limitexceed_modal" : ["newevaluator_modal", "newclass_modal"][selectedTab]}><FiPlus /> NEW {["EVALUATOR", "CLASS"][selectedTab]}</label>
         <div className='p-0 my-2 h-full w-full overflow-hidden hover:overflow-y-auto'>
           {selectedTab === 0 ?
             evaluators?.map((evaluator: any, i: number) => {
@@ -217,7 +217,7 @@ export default function Home({
               <h3 className="font-bold">No Classes!</h3>
               <div className="text-xs">You need to create a class to proceed.</div>
             </div>
-            <label htmlFor="newevaluator_modal" onClick={() => { newClassModalRef.current.click(); }} className="btn btn-primary btn-sm">Create Class</label>
+            <label htmlFor="newevaluator_modal" onClick={() => { newClassModalRef.current.click(); }} className="btn glass btn-primary btn-sm">Create Class</label>
           </div> : <select className="select select-bordered w-full" value={newEvaluatorClassId} onChange={(x) => setNewEvaluatorClassId(x.target.value)}>
             <option disabled value={"-1"}>Select class</option>
             {
@@ -272,7 +272,7 @@ export default function Home({
             </div>}
           <div className="modal-action">
             <label htmlFor="newevaluator_modal" className="btn">Cancel</label>
-            <label htmlFor="newevaluator_modal" className="btn btn-primary" onClick={() => createEvaluator()}>Create Evaluator</label>
+            <label htmlFor="newevaluator_modal" className="btn glass btn-primary" onClick={() => createEvaluator()}>Create Evaluator</label>
           </div>
         </div>
         <label className="modal-backdrop" htmlFor="newevaluator_modal">Cancel</label>
@@ -295,7 +295,7 @@ export default function Home({
           </select>
           <div className="modal-action">
             <label htmlFor="editevaluator_modal" className="btn">Cancel</label>
-            <label htmlFor="editevaluator_modal" className="btn btn-primary" onClick={() => editEvaluator()}>Save</label>
+            <label htmlFor="editevaluator_modal" className="btn glass btn-primary" onClick={() => editEvaluator()}>Save</label>
           </div>
         </div>
         <label className="modal-backdrop" htmlFor="editevaluator_modal">Cancel</label>
@@ -321,7 +321,7 @@ export default function Home({
           <p className="py-4">You have reached the maximum limit of evaluators.<br />You can shop for more evaluators or delete existing ones to create new ones.</p>
           <div className="modal-action">
             <label htmlFor="limitexceed_modal" className="btn">Cancel</label>
-            <label htmlFor="limitexceed_modal" className="btn btn-primary" onClick={() => window.location.href = "/shop"}><FiShoppingCart /> Shop</label>
+            <label htmlFor="limitexceed_modal" className="btn glass btn-primary" onClick={() => window.location.href = "/shop"}><FiShoppingCart /> Shop</label>
           </div>
         </div>
         <label className="modal-backdrop" htmlFor="limitexceed_modal">Cancel</label>
@@ -339,7 +339,7 @@ export default function Home({
           <input className="input input-bordered w-full" placeholder="Subject" type="text" onChange={(x) => setNewClassSubject(x.target.value)} value={newClassSubject} />
           <div className="modal-action">
             <label htmlFor="newclass_modal" className="btn">Cancel</label>
-            <label htmlFor="newclass_modal" className="btn btn-primary" onClick={() => createClass()}>Create Class</label>
+            <label htmlFor="newclass_modal" className="btn glass btn-primary" onClick={() => createClass()}>Create Class</label>
           </div>
         </div>
         <label className="modal-backdrop" htmlFor="newclass_modal">Cancel</label>
@@ -370,7 +370,7 @@ export default function Home({
           <input className="input input-bordered w-full" placeholder="Subject" type="text" onChange={(x) => setEditClassSubject(x.target.value)} value={editClassSubject} />
           <div className="modal-action">
             <label htmlFor="editclass_modal" className="btn">Cancel</label>
-            <label htmlFor="editclass_modal" className="btn btn-primary" onClick={() => editClass()}>Save</label>
+            <label htmlFor="editclass_modal" className="btn glass btn-primary" onClick={() => editClass()}>Save</label>
           </div>
         </div>
         <label className="modal-backdrop" htmlFor="editclass_modal">Cancel</label>

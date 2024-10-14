@@ -50,7 +50,7 @@ export default function Page() {
 
     return <div className='animate-fade-in-bottom w-full h-full p-4'>
         <p className='font-semibold text-xl flex items-center mb-5'><FiHelpCircle className='mr-2' /> FAQ</p>
-        <Link href="/admin/faq/new"><button className='btn btn-primary'>+ New FAQ</button></Link>
+        <Link href="/admin/faq/new"><button className='btn glass btn-primary'>+ New FAQ</button></Link>
         <div className="overflow-x-auto mt-5">
             <table className="table">
                 <thead>

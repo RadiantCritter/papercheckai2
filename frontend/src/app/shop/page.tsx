@@ -55,7 +55,7 @@ export default function Page() {
             }
         </div>
         {!paymentMethods?.razorpay && !paymentMethods?.stripe ? <p className="text-center mb-10 text-red-600">No payment method available</p> : <div className="flex justify-center my-5">
-            <label htmlFor="paymentmethod_modal" className="btn btn-primary" >Buy Now <FiArrowRight /></label>
+            <label htmlFor="paymentmethod_modal" className="btn glass btn-primary" >Buy Now <FiArrowRight /></label>
         </div>}
         {/* Payment Method Modal */}
         <input type="checkbox" id="paymentmethod_modal" className="modal-toggle" />
@@ -85,7 +85,7 @@ export default function Page() {
                 </div> : ""}
                 <div className="modal-action mt-10">
                     <label htmlFor="paymentmethod_modal" className="btn">Cancel</label>
-                    <label className="btn btn-primary" onClick={() => window.location.href = `/shop/payment?item=${items[selectedItem]?._id}&method=${paymentMethod}`}>Pay</label>
+                    <label className="btn glass btn-primary" onClick={() => window.location.href = `/shop/payment?item=${items[selectedItem]?._id}&method=${paymentMethod}`}>Pay</label>
                 </div>
             </div>
             <label className="modal-backdrop" htmlFor="paymentmethod_modal">Cancel</label>

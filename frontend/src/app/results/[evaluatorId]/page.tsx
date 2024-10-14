@@ -57,14 +57,14 @@ export default function Results() {
             </div>
             {selectedTab === 0 ? <div className="overflow-x-auto flex flex-col items-center justify-center">
                 <div className="flex items-center justify-between mb-1 mt-4 w-full max-w-7xl">
-                    <p className="flex items-center font-semibold text-xl"><FiFileText className="mr-2" /> {resultDataTable?.exam}</p>
+                    <p className="flex items-center text-white font-semibold text-xl"><FiFileText className="mr-2" /> {resultDataTable?.exam}</p>
                 </div>
                 <div className="flex items-center max-w-7xl w-full mb-5">
                     <p className="flex items-center text-sm mr-5"><FiBook className="mr-2" /> {resultDataTable?.class?.subject}</p>
                     <p className="flex items-center text-sm"><FiUsers className="mr-2" /> {resultDataTable?.class?.name} {resultDataTable?.class?.section}</p>
                 </div>
                 <div className='print flex w-full items-center max-w-7xl mb-5'>
-                    <button className='btn btn-primary' onClick={() => window.print()}><FiPrinter />Print Marksheet</button>
+                    <button className='btn glass btn-primary' onClick={() => window.print()}><FiPrinter />Print Marksheet</button>
                 </div>
                 <table className="table max-w-7xl">
                     <thead>
@@ -82,7 +82,7 @@ export default function Results() {
                                     <th>{student?.roll_no}</th>
                                     <td>{student?.student_name}</td>
                                     <td>{student?.score}</td>
-                                    <td className='print'><button className='btn btn-primary btn-square' onClick={() => {
+                                    <td className='print'><button className='btn glass btn-primary btn-square' onClick={() => {
                                         setSelectedRollNo(student?.roll_no);
                                         setSelectedTab(1);
                                     }}><FiFileText /></button></td>
@@ -160,7 +160,7 @@ export default function Results() {
                     </div>
                     <div className='my-2 flex items-center'>
                         <label htmlFor='revaluate_modal' className='btn mr-4'><FiRefreshCw /> Revaluate</label>
-                        <button className='btn btn-primary' onClick={() => {
+                        <button className='btn glass btn-primary' onClick={() => {
                             for (var result of resultData?.results) {
                                 if (result?.score[0] === "") {
                                     toast.error("Please fill all the scores");
@@ -197,7 +197,7 @@ export default function Results() {
                     <textarea className="textarea textarea-bordered h-32 mb-4 w-full" placeholder="Enter the prompt / conditions for revaluation. For example: 'Give full marks if student has attempted the question'. Leave blank if none." onChange={(x) => setRevaluationPrompt(x.target.value)} value={revaluationPrompt} />
                     <div className="modal-action">
                         <label htmlFor="revaluate_modal" className="btn">Cancel</label>
-                        <label htmlFor="revaluate_modal" className="btn btn-primary" onClick={() => {
+                        <label htmlFor="revaluate_modal" className="btn glass btn-primary" onClick={() => {
                             toast.promise(revaluate(evaluatorId, selectedRollNo, revaluationPrompt), {
                                 pending: "Revaluating...",
                                 success: "Revaluation complete",

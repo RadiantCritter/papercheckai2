@@ -103,7 +103,7 @@ export default function CheckoutForm({ orderId }: { orderId: string }) {
                 onChange={(e: any) => setEmail(e.target.value)}
             />
             <PaymentElement id="payment-element" options={paymentElementOptions} />
-            <button className={((isLoading || !stripe || !elements) ? "opacity-50" : "") + " btn btn-primary w-full mt-5"} id="submit">
+            <button className={((isLoading || !stripe || !elements) ? "opacity-50" : "") + " btn glass btn-primary w-full mt-5"} id="submit">
                 <span id="button-text">
                     {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
                 </span>

@@ -32,7 +32,7 @@ export default function Home({
   }, []);
 
   return (
-    <main className="flex bg-base-100 h-screen w-screen p-2 max-sm:p-0" onClick={() => {
+    <main className="flex bg-black h-screen w-screen p-2 max-sm:p-0" onClick={() => {
       if (moreMenuOpen) setMoreMenuOpen(false);
     }}>
       {/* Sidebar */}

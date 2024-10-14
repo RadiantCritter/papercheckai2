@@ -51,14 +51,14 @@ export default function Classes() {
         </button>
       </div>
       <div className="flex items-center justify-between mb-1 mt-4 w-full max-w-lg">
-        <p className="flex items-center font-semibold text-xl"><FiBook className="mr-2" /> {classes[selectedClass]?.subject} <FiUsers className="ml-5 mr-2" /> {classes[selectedClass]?.name} {classes[selectedClass]?.section}</p>
+        <p className="flex items-center font-semibold text-white text-xl"><FiBook className="mr-2" /> {classes[selectedClass]?.subject} <FiUsers className="ml-5 mr-2" /> {classes[selectedClass]?.name} {classes[selectedClass]?.section}</p>
       </div>
       <div className="print flex mt-5">
-        <label htmlFor="newstudent_modal" className="btn btn-primary" onClick={() => setNewStudentRollNo(students.length + 1)}>+ New Student</label>
+        <label htmlFor="newstudent_modal" className="btn glass btn-primary" onClick={() => setNewStudentRollNo(students.length + 1)}>+ New Student</label>
       </div>
       <div className="overflow-y-auto h-[70vh] mt-5">
         <div className='print flex w-full items-center max-w-7xl py-5'>
-          <button className='btn btn-primary' onClick={() => window.print()}><FiPrinter />Download / Print</button>
+          <button className='btn glass btn-primary' onClick={() => window.print()}><FiPrinter />Download / Print</button>
         </div>
         <table className="table">
           {/* head */}
@@ -98,7 +98,7 @@ export default function Classes() {
           <input className="input input-bordered w-full" placeholder="Student Name" type="text" onChange={(x) => setNewStudentName(x.target.value)} value={newStudentName} />
           <div className="modal-action">
             <label htmlFor="newstudent_modal" className="btn">Cancel</label>
-            <label htmlFor="newstudent_modal" className="btn btn-primary" onClick={() => addStudent()}>Add Student</label>
+            <label htmlFor="newstudent_modal" className="btn glass btn-primary" onClick={() => addStudent()}>Add Student</label>
           </div>
         </div>
         <label className="modal-backdrop" htmlFor="newstudent_modal">Cancel</label>
@@ -127,7 +127,7 @@ export default function Classes() {
           <input className="input input-bordered w-full" placeholder="Student Name" type="text" onChange={(x) => setEditStudentName(x.target.value)} value={editStudentName} />
           <div className="modal-action">
             <label htmlFor="editstudent_modal" className="btn">Cancel</label>
-            <label htmlFor="editstudent_modal" className="btn btn-primary" onClick={() => editStudent()}>Save</label>
+            <label htmlFor="editstudent_modal" className="btn glass btn-primary" onClick={() => editStudent()}>Save</label>
           </div>
         </div>
         <label className="modal-backdrop" htmlFor="editstudent_modal">Cancel</label>
